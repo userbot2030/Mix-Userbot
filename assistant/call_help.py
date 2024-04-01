@@ -126,10 +126,10 @@ async def _(c, cq):
     txt = cgr("supot")
     kbt = ikb(
         {
-            "Support 1": f"https://t.me/kynansupport",
-            "Support 2": f"https://t.me/gokilsupport",
-            "Channel 1": f"https://t.me/kontenfilm",
-            "Channel 2": f"https://t.me/SquirtInYourPussy",
+            "Support 1": f"https://t.me/Disney_storeDan",
+            "Support 2": f"https://t.me/Disney_storeDan",
+            "Channel 1": f"https://t.me/Disney_storeDan",
+            "Channel 2": f"https://t.me/Disney_storeDan",
             "Stats": "stats_mix",
         }
     )
@@ -224,7 +224,7 @@ async def _(c, cq):
         else:
             try:
                 await cq.edit_message_text(
-                    text=text + f"\n<b>© Mix-Userbot - @KynanSupport</b>",
+                    text=text + f"\n<b>© Dan-Userbot - @Disney_storeDan</b>",
                     reply_markup=button,
                     disable_web_page_preview=True,
                 )
