@@ -3,11 +3,7 @@ import asyncio
 from pyrogram import idle
 from pyrogram.errors import *
 
-from beban import (autor_all, autor_bot, autor_ch, autor_gc, autor_mention,
-                   autor_us)
 from Mix import *
-from Mix.core.gclog import check_logger, getFinish
-from Mix.core.waktu import auto_clean
 
 loop = asyncio.get_event_loop_policy()
 event_loop = loop.get_event_loop()
@@ -21,6 +17,7 @@ async def start_user():
     except (SessionExpired, ApiIdInvalid, UserDeactivatedBan):
         LOGGER.info("Check your session or api id!!")
         sys.exit(1)
+
 
 """
 async def start_bot():
