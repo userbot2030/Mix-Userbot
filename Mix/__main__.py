@@ -17,11 +17,12 @@ async def start_user():
     LOGGER.info(f"Starting Telegram User Client...")
     try:
         await nlx.start()
+        await idle()
     except (SessionExpired, ApiIdInvalid, UserDeactivatedBan):
         LOGGER.info("Check your session or api id!!")
         sys.exit(1)
 
-
+"""
 async def start_bot():
     LOGGER.info(f"Starting Telegram Bot Client...")
     if TOKEN_BOT is None:
@@ -70,7 +71,7 @@ async def main():
         isFinish(),
         idle(),
     )
-
+"""
 
 if __name__ == "__main__":
     asyncio.set_event_loop(event_loop)
