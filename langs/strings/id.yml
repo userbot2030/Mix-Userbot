@@ -21,7 +21,12 @@ reboot_1: "Reboot telah berhasil dimulai! Tunggu 1 - 2 menit hingga bot dimulai 
 supot: "**Jika anda butuhkan bantuan silahkan datang ke Grup Support Dibawah!!**\n\n**Atau kamu bisa melihat update di Channel Kami..**"
 
 # proxy
-prox_1: "{} **Top 2 Proxy Terbaik :**\n"
+prox_1: "**➣ `{}`**"
+prox_2: "{} <b>Tidak terdapat proxy yang tersedia.</b>"
+prox_3: "{} **Berikut adalah daftar proxy `{}` :**\n\n"
+prox_4: "{} **Tidak dapat menemukan proxy yang valid.**"
+prox_5: "{} <b>Perintah tidak valid. \nGunakan perintah {} [`http`|`socks4`|`socks5`]</b>"
+prox_6: "{} <b>Perintah tidak valid.\nGunakan perintah `{}` [`http`|`socks4`|`socks5`]</b>"
 
 # tod
 tod_1: "{} **Tantangan :**\n\n `{}`"
@@ -471,6 +476,19 @@ qur_1: "{} Silahkan berikan nama surah."
 qur_2: "{} Gagal mengunduh audio."
 qur_3: "{} Surah dengan nama '{}' tidak ditemukan."
 
+# pinterest
+pint_1: "{} **Tidak ada gambar atau video yang ditemukan di URL Pinterest**"
+pint_2: "{} **Downloaded by : {}**"
+pint_3: "{} **Gagal mendapatkan tautan unduhan dari {}**"
+pint_4: "{} **Terjadi kesalahan saat mengunduh: `{}`**"
+
+# base64
+enc_1: "{} **Berhasil di encode :**\n`{}`"
+enc_2: "{} **Berhasil di decode :**\n`{}`"
+enc_3: "{} **Gagal untuk {} pesan**"
+enc_4: "{} **Gagal :** `{}`"
+enc_5: "{} **Silahkan berikan pesan, text, atau balas pesan**"
+
 # help_for
 help_afk: " Afk\n\n• Perintah : `{0}afk` [alasan]\n• Penjelasan : Untuk mengaktifkan mode afk.\n\n• Perintah : `{0}unafk`\n• Penjelasan : Untuk menonaktifkan mode afk."
 help_alive: " Alive\n\n• Perintah : `{0}alive`\n• Penjelasan : Alive."
@@ -538,6 +556,9 @@ help_lirk: " **Lyric**\n\n• Perintah: `{0}`lyrics\n• Penjelasan: Untuk menca
 help_auend: " **AutoEnd**\n\n• Perintah: `{0}`endchat [username/id pengguna/balas pengguna]\n• Penjelasan: Untuk menghapus riwayat obrolan\n\n• Optional: \n• `username/balas pengguna` - Menghapus riwayat obrolan pengguna\n• `bot` - Menghapus semua riwayat obrolan bot\n• `all` - Menghapus riwayat obrolan pesan pribadi anda dengan semua pengguna.\n"
 help_img: " **Image**\n\n• Perintah: `{0}`img [kata pencarian]\n• Penjelasan: Mencari image atau gambar.\n"
 help_tod: " **Truth Or Dare**\n\n• Perintah: `{0}truth`\n• Penjelasan: Untuk memberikan pertanyaan random yang harus dijawab jujur!\n\n• Perintah: `{0}dare`\n• Penjelasan: Untuk memberikan tantangan random yang harus dilakukan!\n"
-help_prox: " **Proxy**\n\n• Perintah: `{0}proxy`\n• Penjelasan: Untuk mengambil 2 proxy socks5 acak terbaik.\n"
+help_prox: " **Proxy**\n\n• Perintah: `{0}getproxy` [`http`|`socks4`|`socks5`]\n• Penjelasan: Untuk mengambil proxy acak dan terbaik.\n"
 help_waif: " **Waifu**\n\n• Perintah: `{0}waifu` [kategori]\n• Penjelasan: Untuk mendapatkan gambar waifu/anime sesuai kategori.\n"
-help_qur: " **Qur'an**\n\n• Perintah: `{0}qs [nama surah]`\n• Penjelasan: Untuk mengambil info surah tersebut.\n\n• Perintah: `{0}list-surah`\n• Penjelasan: Untuk mengambil daftar surah.\n"
+help_qur: " **Qur'an**\n\n• Perintah: `{0}qs [nama surah]`\n• Penjelasan: Untuk mengambil info surah tersebut.\n\n• Perintah: `{0}list_surah`\n• Penjelasan: Untuk mengambil daftar surah.\n"
+help_animstream: " **Anime Streaming**\n\n• Perintah: `{0}streaming` [Judul Film]\n• Penjelasan: Untuk mengambil link streaming film anime\n\n• Perintah: `{0}list_anime`\n• Penjelasan: Untuk mengambil daftar film anime yang tersedia.\n"
+help_pint: " **Pinterest**\n\n• Perintah: `{0}pint` [link pinterest]\n• Penjelasan: Untuk mengunduh file yang terdapat pada link.\n"
+help_enc: " **Base64 Encoder**\n\n• Perintah: `{0}encode` [teks|balas pesan]\n• Penjelasan: Untuk encode base64\n\n• Perintah: `{0}decode` [teks|balas pesan]\n• Penjelasan: Untuk decode base64"
