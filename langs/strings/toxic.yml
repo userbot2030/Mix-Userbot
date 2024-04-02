@@ -21,7 +21,12 @@ reboot_1: "Reboot telah berhasil dimulai! Tunggu 1 - 2 menit hingga bot dimulai 
 supot: "**Eh Goblok Kalo Lo Buta MAP, Lo dateng bae ke Grup Support Dibawah!!\n\nAtau Lo bisa ke Channel buat liat Apa yg Update..**"
 
 # proxy
-prox_1: "{} **Gue Kasih 2 Biji yang bagus nih :**\n"
+prox_1: "**➣ `{}`**"
+prox_2: "{} <b>Kasian amat, proxy nya lagi kosong.</b>"
+prox_3: "{} **Nih daftar proxy nya jink `{}` :**\n\n"
+prox_4: "{} **Lah kaga ada proxy kek gitu goblok.**"
+prox_5: "{} <b>Perintahnya yang bener lah njink!\nKaya gini nih! {} [`http`|`socks4`|`socks5`]</b>"
+prox_6: "{} <b>Perintahnya yang bener lah njink!\nKaya gini nih! `{}` [`http`|`socks4`|`socks5`]</b>"
 
 # tod
 tod_1: "{} **Dare :**\n\n `{}`"
@@ -87,7 +92,7 @@ inv_6: "{} Fitur ini cuma buat group/channel tolol mikir lah udah gede masih kag
 # join
 join_1: "{} <b>Berhasil gabung ke</b> <code>{}</code>"
 join_2: "{} <b>Kaga boleh make itu perintah di `{}` goblok</b>"
-join_3: "{} <b>Sukses keluar dari <code>{}</code>"
+join_3: "{} <b> {} Sukses keluar dari <code>{}</code>"
 join_4: "{} <b>Bye!</b>"
 join_5: "{} <b>Sukses keluar dari `{}` Grup ampas,\n{} Gagal Keluar dari `{}` Grup ampas</b>"
 join_6: "{} <b>Berhasil keluar dari `{}` Channel ampas\n{} Gagal keluar dari `{}` Channel ampas.</b>"
@@ -471,6 +476,19 @@ qur_1: "{} Lo mau cari surah apa si goblok? masukin nama surah nya lah!"
 qur_2: "{} Gagal download audio."
 qur_3: "{} Kaga ada surah '{}' Non-Islam lo ya?"
 
+# pinterest
+pint_1: "{} **Tidak ada gambar atau video yang ditemukan di URL Pinterest**"
+pint_2: "{} **Downloaded by : {}**"
+pint_3: "{} **Gagal download jink : `{}`**"
+pint_4: "{} **Yah kaga bisa tot : `{}`**"
+
+# base64
+enc_1: "{} **Udah di encode nih jink :**\n`{}`"
+enc_2: "{} **Udah di decode nih jink :**\n`{}`"
+enc_3: "{} **Gagal di {} pesannya tot!**"
+enc_4: "{} **Mampus!\nGagal :** `{}`"
+enc_5: "{} **Bego! Goblok! minimal kasih teks kalo ngga bales ke pesan kek anj!**"
+
 # help_for
 help_afk: " Afk\n\n• Perintah : `{0}afk` [alesan]\n• Penjelasan : Buat mengaktifkan mode afk.\n\n• Perintah : `{0}unafk`\n• Penjelasan : Buat menonaktifkan mode afk."
 help_alive: " Alive\n\n• Perintah : `{0}alive`\n• Penjelasan : Alive."
@@ -538,6 +556,9 @@ help_lirk: " **Lyric**\n\n• Perintah: `{0}`lyrics\n• Penjelasan: Untuk menca
 help_auend: " **AutoEnd**\n\n• Perintah: `{0}endchat` [username/id pengguna/balas pengguna]\n• Penjelasan: Untuk menghapus riwayat obrolan\n\n• Optional: \n• `username/balas pengguna` - Menghapus riwayat obrolan pengguna\n• `bot` - Menghapus semua riwayat obrolan bot\n• `all` - Menghapus riwayat obrolan pesan pribadi anda dengan semua pengguna."
 help_img: " **Image**\n\n• Perintah: `{0}`img [kata kunci]\n• Penjelasan: Nyari gambar.\n"
 help_tod: " **Truth Or Dare**\n\n• Perintah: `{0}truth`\n• Penjelasan: Untuk memberikan pertanyaan random yang harus dijawab jujur!\n\n• Perintah: `{0}dare`\n• Penjelasan: Untuk memberikan tantangan random yang harus dilakukan!\n"
-help_prox: " **Proxy**\n\n• Perintah: `{0}proxy`\n• Penjelasan: Buat ngambil 2 proxy socks5 ngacak terbaik.\n"
+help_prox: " **Proxy**\n\n• Perintah: `{0}getproxy` [`http`|`socks4`|`socks5`]\n• Penjelasan: Buat ngambil proxy ngacak terbaik.\n"
 help_waif: " **Waifu**\n\n• Perintah: `{0}waifu` [kategori]\n• Penjelasan: Untuk mendapatkan gambar waifu/anime sesuai kategori.\n"
 help_qur: " **Qur'an**\n\n• Perintah: `{0}qs [nama surah]`\n• Penjelasan: Untuk mengambil info surah tersebut.\n\n• Perintah: `{0}list-surah`\n• Penjelasan: Untuk mengambil daftar surah.\n"
+help_animstream: " **Anime Streaming**\n\n• Perintah: `{0}streaming` [Judul Film]\n• Penjelasan: Untuk mengambil link streaming film anime\n\n• Perintah: `{0}list_anime`\n• Penjelasan: Untuk mengambil daftar film anime yang tersedia.\n"
+help_pint: " **Pinterest**\n\n• Perintah: `{0}pint` [link pinterest]\n• Penjelasan: Untuk mengunduh file yang terdapat pada link.\n"
+help_enc: " **Base64 Encoder**\n\n• Perintah: `{0}encode` [teks|balas pesan]\n• Penjelasan: Untuk encode base64\n\n• Perintah: `{0}decode` [teks|balas pesan]\n• Penjelasan: Untuk decode base64"
