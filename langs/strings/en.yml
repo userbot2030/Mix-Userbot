@@ -21,7 +21,12 @@ reboot_1: "Reboot has been initiated successfully! Please wait 1 - 2 minutes for
 supot: "**If you need help, please come to the Support Group Below!!\n\nOr you can see updates on our Channel...**"
 
 # proxy
-prox_1: "{} **Top 2 best proxies:**\n"
+prox_1: "**➣ `{}`**"
+prox_2: "{} <b>Nothing found froxy.</b>"
+prox_3: "{} **List Proxy of `{}` :**\n\n"
+prox_4: "{} **There's no Proxy valid.**"
+prox_5: "{} <b>Commands not valid.\nExample commands {} [`http`|`socks4`|`socks5`]</b>"
+prox_6: "{} <b>Commands not valid.\nExample commands `{}` [`http`|`socks4`|`socks5`]</b>"
 
 # tod
 tod_1: "{} **Dare :**\n\n `{}`"
@@ -88,7 +93,7 @@ join_3: "{} {} Successfully left <code>{}</code>"
 join_4: "{} <b>Bye!</b>"
 join_5: "{} <b>Successfully left `{}` Groups\n{} Failed to leave `{}` Groups</b>"
 join_6: "{} <b>Successfully left `{}` channel\n{} Failed to leave `{}` channel.</b>"
-join_7: "{} <b>You can't use this command on this chat!\nBecause, You're a `Admin` or `Owner` of `{}`</b>"
+join_7: "{} <b>You can't use this command on this chat!\nBecause, You're an `Admin` or `Owner` of `{}`</b>"
 
 # assistant
 asst_1: "Hello 👋 {} !! I'm your bot assistant.\n\nWhat settings would you like to change?"
@@ -470,6 +475,19 @@ qur_1: "{} Please give me name of surah."
 qur_2: "{} Failed to download audio."
 qur_3: "{} There's nothing surah with name '{}' "
 
+# pinterest
+pint_1: "{} **There's no Image or Video on URL Pinterest**"
+pint_2: "{} **Downloaded by : {}**"
+pint_3: "{} **Failed to catch donwload file from : `{}`**"
+pint_4: "{} **Something error while downloading : `{}`**"
+
+# base64
+enc_1: "{} **Successfully encoded :**\n`{}`"
+enc_2: "{} **Successfully decoded :**\n`{}`"
+enc_3: "{} **Failed {} pesan**"
+enc_4: "{} **Failed :** `{}`"
+enc_5: "{} **Please give some text or reply message.**"
+
 # help_for
 help_afk: " Afk\n\n• Command: `{0}afk` [reason]\n• Description: To activate afk mode.\n\n• Command: `{0}unafk` [reason]\n• Description: To deactivate afk mode."
 help_alive: " Alive\n\n• Command: `{0}alive`\n• Description: Alive."
@@ -537,6 +555,9 @@ help_lirk: " **Lyric**\n\n• Command: `{0}`lyrics\n• Description: To search f
 help_auend: " **AutoEnd**\n\n• Command: `{0}`endchat [username/user ID/reply to user]\n• Description: To delete chat history\n\n• Optional: \n• `username/reply to user` - Delete chat history of user\n• `bot` - Delete all bot chat history\n• `all` - Delete chat history of all your private messages."
 help_img: " **Image**\n\n• Command: `{0}`img [query]\n• Description: Searching image.\n"
 help_tod: " **Truth Or Dare**\n\n• Command: `{0}truth`\n• Description: To provide random questions that must be answered truthfully!\n\n• Command: `{0}dare`\n• Description: To provide a random challenge that must be done!\n"
-help_prox: " **Proxy**\n\n• Command: `{0}proxy`\n• Description: For get Top 2 socks5 as random but best.\n"
+help_prox: " **Proxy**\n\n• Command: `{0}getproxy` [`http`|`socks4`|`socks5`]\n• Description: For get Top 2 as random but best.\n"
 help_waif: " **Waifu**\n\n• Command: `{0}waifu` [categori]\n• Description: For getting image/content about waifu/anime.\n"
-help_qur: " **Qur'an**\n\n• Command: `{0}qs [name of surah]`\n• Description: Fetching information of Surah.\n\n• Command: `{0}list-surah`\n• Description: Getting List of Surah Al-Quran.\n"
+help_qur: " **Qur'an**\n\n• Command: `{0}qs [name of surah]`\n• Description: Fetching information of Surah.\n\n• Command: `{0}list_surah`\n• Description: Getting List of Surah Al-Quran.\n"
+help_animstream: " **Anime Streaming**\n\n• Command: `{0}streaming` [Anime Title Movie]\n• Description: For getting link for streaming anime.\n\n• Command: `{0}list_anime`\n• Description: For getting anime list movies\n"
+help_pint: " **Pinterest**\n\n• Command: `{0}pint` [link pinterest]\n• Description: For downloading file on pinterest use link.\n"
+help_enc: " **Base64 Encoder**\n\n• Command: `{0}encode` [text|reply text]\n• Description: For encoding base64\n\n• Command: `{0}decode` [text|reply text]\n• Description: For Decoding base64.\n"
