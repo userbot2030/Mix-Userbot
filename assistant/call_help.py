@@ -6,15 +6,16 @@
  
  EH KONTOL BAJINGAN !! KALO MO PAKE DIKODE PAKE AJA BANGSAT!! GAUSAH APUS KREDIT NGENTOT
 """
-################################################################
-
-
 import asyncio
 import re
+################################################################
+from base64 import urlsafe_b64decode
+from struct import unpack
 from time import time
 
 import psutil
 import speedtest
+from attrify import Attrify as Atr
 from pyrogram import *
 from pyrogram.enums import *
 from pyrogram.errors import *
@@ -479,14 +480,31 @@ async def _(_, cq):
         return
 
 
+def unpacked2(inline_message_id: str):
+    dc_id, message_id, chat_id, query_id = unpack(
+        "<iiiq",
+        urlsafe_b64decode(
+            inline_message_id + "=" * (len(inline_message_id) % 4),
+        ),
+    )
+    temp = {
+        "dc_id": dc_id,
+        "message_id": message_id,
+        "chat_id": int(str(chat_id).replace("-", "-100")),
+        "query_id": query_id,
+        "inline_message_id": inline_message_id,
+    }
+    return Atr(temp)
+
+
 @ky.callback("^close")
 async def _(_, cq):
-    unPacked = unpackInlineMessage(cq.inline_message_id)
-    if cq.from_user.id == nlx.me.id:
-        await nlx.delete_messages(unPacked.chat_id, unPacked.message_id)
-    else:
-        await cq.answer(f"Jangan Di Pencet Anjeng.", True)
-        return
+    unPacked = unpacked2(cq.inline_message_id)
+    # if cq.from_user.id == nlx.me.id:
+    await nlx.delete_messages(unPacked.chat_id, unPacked.message_id)
+    # else:
+    # await cq.answer(f"Jangan Di Pencet Anjeng.", True)
+    # return
 
 
 def cb_tespeed():

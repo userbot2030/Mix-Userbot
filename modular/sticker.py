@@ -88,20 +88,34 @@ async def _(self: nlx, m):
     em = Emojik()
     em.initialize()
     rep = m.reply_to_message
+    cekemo = self.get_arg(m)
     await nlx.unblock_user(bot.me.username)
     if not rep:
         await m.reply(cgr("st_7").format(em.gagal))
         return
     await nlx.send_message(bot.me.username, "/kang")
     pros = await m.reply(cgr("proses").format(em.proses))
-    ai = await nlx.forward_messages(bot.me.username, m.chat.id, message_ids=rep.id)
-    await nlx.send_message(bot.me.username, "/kang", reply_to_message_id=ai.id)
-    await asyncio.sleep(5)
-    async for tai in nlx.search_messages(
-        bot.me.username, query="Sticker Anda Berhasil Dibuat!", limit=1
-    ):
+    if len(m.command) == 2:
+        ai = await nlx.forward_messages(bot.me.username, m.chat.id, message_ids=rep.id)
+        await nlx.send_message(
+            bot.me.username, f"/kang {cekemo}", reply_to_message_id=ai.id
+        )
         await asyncio.sleep(5)
-        await tai.copy(m.chat.id)
+        async for tai in nlx.search_messages(
+            bot.me.username, query="Sticker Anda Berhasil Dibuat!", limit=1
+        ):
+            await asyncio.sleep(5)
+            await tai.copy(m.chat.id)
+    else:
+        ai = await nlx.forward_messages(bot.me.username, m.chat.id, message_ids=rep.id)
+        await nlx.send_message(bot.me.username, "/kang", reply_to_message_id=ai.id)
+        await asyncio.sleep(5)
+        async for tai in nlx.search_messages(
+            bot.me.username, query="Sticker Anda Berhasil Dibuat!", limit=1
+        ):
+            await asyncio.sleep(5)
+            await tai.copy(m.chat.id)
+
     await pros.delete()
     ulat = await nlx.resolve_peer(bot.me.username)
     await nlx.invoke(DeleteHistory(peer=ulat, max_id=0, revoke=True))

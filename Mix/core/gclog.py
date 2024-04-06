@@ -29,33 +29,36 @@ from Mix import bot, nlx
 
 
 async def check_logger():
-    LOGGER.info(f"Creating Grup Log...")
-    nama = f"Mix-Userbot Logs"
-    des = "Jangan Keluar Dari Grup Log Ini\n\nPowered by: @KynanSupport"
-    log_pic = "https://telegra.ph//file/ee7fc86ab183a0ff90392.jpg"
-    gc = await nlx.create_supergroup(nama, des)
-    bhan = wget.download(f"{log_pic}")
-    gmbr = {"video": bhan} if bhan.endswith(".mp4") else {"photo": bhan}
-    kntl = gc.id
-    await nlx.set_chat_photo(kntl, **gmbr)
-    await nlx.promote_chat_member(
-        kntl,
-        bot.me.username,
-        privileges=ChatPrivileges(
-            can_change_info=True,
-            can_invite_users=True,
-            can_delete_messages=True,
-            can_restrict_members=True,
-            can_pin_messages=True,
-            can_promote_members=True,
-            can_manage_chat=True,
-            can_manage_video_chats=True,
-        ),
-    )
-    ndB.set_key("TAG_LOG", kntl)
-    await nlx.send_message(kntl, f"<b>Group Log Berhasil Dibuat.</b>")
-    LOGGER.info(f"Group Logger Enable...")
-    execvp(executable, [executable, "-m", "Mix"])
+    if not ndB.get_key("TAG_LOG") and log_channel is None:
+        LOGGER.info(f"Creating Grup Log...")
+        nama = f"Mix-Userbot Logs"
+        des = "Jangan Keluar Dari Grup Log Ini\n\nPowered by: @KynanSupport"
+        log_pic = "https://telegra.ph//file/ee7fc86ab183a0ff90392.jpg"
+        gc = await nlx.create_supergroup(nama, des)
+        bhan = wget.download(f"{log_pic}")
+        gmbr = {"video": bhan} if bhan.endswith(".mp4") else {"photo": bhan}
+        kntl = gc.id
+        await nlx.set_chat_photo(kntl, **gmbr)
+        await nlx.promote_chat_member(
+            kntl,
+            bot.me.username,
+            privileges=ChatPrivileges(
+                can_change_info=True,
+                can_invite_users=True,
+                can_delete_messages=True,
+                can_restrict_members=True,
+                can_pin_messages=True,
+                can_promote_members=True,
+                can_manage_chat=True,
+                can_manage_video_chats=True,
+            ),
+        )
+        ndB.set_key("TAG_LOG", kntl)
+        await nlx.send_message(kntl, f"<b>Group Log Berhasil Dibuat.</b>")
+        LOGGER.info(f"Group Logger Enable...")
+        execvp(executable, [executable, "-m", "Mix"])
+    else:
+        return
 
 
 async def getFinish():
@@ -63,7 +66,7 @@ async def getFinish():
     xx = " ".join(emut)
     try:
         await bot.send_message(
-            TAG_LOG,
+            int(TAG_LOG),
             f"""
 <b>Userbot Successfully Deploy !!</b>
 
@@ -77,7 +80,7 @@ async def getFinish():
     except (ChannelInvalid, PeerIdInvalid):
         try:
             await nlx.promote_chat_member(
-                TAG_LOG,
+                int(TAG_LOG),
                 bot.me.username,
                 privileges=ChatPrivileges(
                     can_change_info=True,
@@ -91,7 +94,7 @@ async def getFinish():
                 ),
             )
             await bot.send_message(
-                TAG_LOG,
+                int(TAG_LOG),
                 f"""
 <b>Userbot Successfully Deploy !!</b>
 

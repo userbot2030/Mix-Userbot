@@ -2,9 +2,9 @@ from os import getenv
 
 from dotenv import load_dotenv
 
-load_dotenv(".env")
+load_dotenv()
 
-api_id = int(getenv("api_id", None))
+api_id = int(getenv("api_id"))
 api_hash = getenv("api_hash", None)
 session = getenv("session", None)
 bot_token = getenv("bot_token", None)

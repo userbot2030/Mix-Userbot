@@ -333,6 +333,7 @@ async def _(c: nlx, m):
 
 
 @ky.ubot("me|userstats", sudo=True)
+@ky.devs("userstats")
 async def _(c, m):
     em = Emojik()
     em.initialize()
@@ -344,35 +345,65 @@ async def _(c, m):
     tgr = 0
     ceger = 0
     kntl = 0
+    benet = 0
+    dimari = set()
     xenn = await c.get_me()
-    async for dialog in c.get_dialogs():
-        if dialog.chat.type == ChatType.PRIVATE:
-            zz += 1
-        elif dialog.chat.type == ChatType.BOT:
-            ceger += 1
-        elif dialog.chat.type == ChatType.GROUP:
-            nanki += 1
-        elif dialog.chat.type == ChatType.SUPERGROUP:
-            luci += 1
-            user_s = await dialog.chat.get_member(int(xenn.id))
-            if user_s.status in (
-                ChatMemberStatus.OWNER,
-                ChatMemberStatus.ADMINISTRATOR,
-            ):
-                kntl += 1
-        elif dialog.chat.type == ChatType.CHANNEL:
-            tgr += 1
+
+    try:
+        async for dialog in c.get_dialogs():
+            try:
+                if dialog.chat.type == ChatType.PRIVATE:
+                    zz += 1
+                elif dialog.chat.type == ChatType.BOT:
+                    ceger += 1
+                elif dialog.chat.type == ChatType.GROUP:
+                    nanki += 1
+                elif dialog.chat.type == ChatType.SUPERGROUP:
+                    luci += 1
+                    user_s = await dialog.chat.get_member(int(xenn.id))
+                    if user_s.status in (
+                        ChatMemberStatus.OWNER,
+                        ChatMemberStatus.ADMINISTRATOR,
+                    ):
+                        kntl += 1
+                elif dialog.chat.type == ChatType.CHANNEL:
+                    tgr += 1
+            except ChannelPrivate:
+                benet += 1
+                dimari.add(dialog.chat.id)
+                await c.leave_chat(dialog.chat.id)
+                print(f"Left chat: {dialog.chat.id}")
+                continue
+    except ChannelPrivate:
+        benet += 1
+        dimari.add(dialog.chat.id)
 
     end = datetime.now()
     ms = (end - start).seconds
+
+    if not dimari:
+        dimari = None
+
     await Nan.edit_text(
         """**succesful extract your data in `{}` seconds
 `{}` Private Messages.
 `{}` Groups.
 `{}` Super Groups.
 `{}` Channels.
-`Admin in {}` Chats.
-`{}` Bots**""".format(
-            ms, zz, nanki, luci, tgr, kntl, ceger
+`{}` Admin in Chats.
+`{}` Bots.
+`{}` Group With Trouble
+
+I've trouble with this chat : 
+- `{}`**""".format(
+            ms,
+            zz,
+            nanki,
+            luci,
+            tgr,
+            kntl,
+            ceger,
+            benet,
+            dimari,
         )
     )

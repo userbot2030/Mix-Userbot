@@ -4,7 +4,7 @@ from pyrogram import idle
 from pyrogram.errors import *
 
 from beban import (autor_all, autor_bot, autor_ch, autor_gc, autor_mention,
-                   autor_us, dasar_laknat)
+                   autor_us)
 from Mix import *
 from Mix.core.gclog import check_logger, getFinish
 from Mix.core.waktu import auto_clean
@@ -17,7 +17,6 @@ async def start_user():
     LOGGER.info(f"Starting Telegram User Client...")
     try:
         await nlx.start()
-        await dasar_laknat(nlx)
     except (SessionExpired, ApiIdInvalid, UserDeactivatedBan):
         LOGGER.info("Check your session or api id!!")
         sys.exit(1)
@@ -45,7 +44,6 @@ async def starter():
     await start_user()
     if nlx.is_connected:
         await start_bot()
-    if not TAG_LOG:
         await check_logger()
 
 

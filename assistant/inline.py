@@ -13,6 +13,7 @@ from datetime import datetime
 from gc import get_objects
 from time import time
 
+import requests
 from pyrogram import *
 from pyrogram.enums import *
 from pyrogram.errors import *
@@ -37,9 +38,15 @@ async def diinline(q):
         "bot": [ChatType.BOT],
         "ch": [ChatType.CHANNEL],
     }
-    async for dialog in nlx.get_dialogs():
-        if dialog.chat.type in chat_types[q]:
-            chats.append(dialog.chat.id)
+    try:
+        async for dialog in nlx.get_dialogs():
+            try:
+                if dialog.chat.type in chat_types[q]:
+                    chats.append(dialog.chat.id)
+            except Exception as e:
+                LOGGER.error(f"An error occurred while processing dialog: {e}")
+    except Exception as e:
+        LOGGER.error(f"An error occurred while getting dialogs: {e}")
 
     return chats
 
@@ -161,6 +168,61 @@ async def _(c, iq):
             )
         ],
     )
+
+
+async def get_streaming_links(anime_id, c: nlx):
+    try:
+        url = f"https://api.jikan.moe/v4/anime/{anime_id}/streaming"
+        response = requests.get(url)
+        if response.status_code == 200:
+            data = response.json().get("data", [])
+            return data
+        else:
+            return []
+    except Exception as e:
+        await c.send_message(
+            f"**Error occurred while fetching streaming links:** `{e}`"
+        )
+        return []
+
+
+@ky.inline("^steam_in")
+async def _(c, iq):
+    try:
+        ms = "**Daftar Streaming Link Streaming :**"
+        q = iq.query.split(None, 1)
+        ambilka = await get_streaming_links(q[1], c)
+        batin = InlineKeyboard(row_width=2)
+        batin.add(
+            *[
+                (
+                    Ikb(
+                        f"{link_data['name']}",
+                        url=f"{link_data['url']}",
+                    )
+                )
+                for link_data in ambilka
+            ]
+        )
+        await c.answer_inline_query(
+            iq.id,
+            cache_time=0,
+            results=[
+                (
+                    InlineQueryResultArticle(
+                        title="message",
+                        reply_markup=batin,
+                        input_message_content=InputTextMessageContent(ms),
+                    )
+                )
+            ],
+        )
+    except Exception as e:
+        await c.send_message(
+            iq.from_user.id, f"**Error occurred while processing inline query:** `{e}`"
+        )
+    else:
+        await c.delete_messages(iq.from_user.id, [iq.id])
 
 
 # send

@@ -10,6 +10,7 @@ import asyncio
 
 from pyrogram.enums import *
 from pyrogram.errors import *
+from pyrogram.raw.functions.messages import DeleteHistory
 from pyrogram.types import ChatPermissions, ChatPrivileges
 
 from Mix import DEVS, Emojik, cgr, get_cgr, ky, nlx
@@ -364,6 +365,7 @@ async def _(c: nlx, m):
 
 
 @ky.ubot("fullpromote", sudo=True)
+@ky.devs("mfullpromote")
 async def _(c: nlx, m):
     em = Emojik()
     em.initialize()
@@ -385,11 +387,11 @@ async def _(c: nlx, m):
         await m.chat.promote_member(user_id=user_id, privileges=bot.privileges)
         title = ""
         if m.chat.type in [ChatType.SUPERGROUP, ChatType.GROUP]:
-            title = "Babu"  # Default fullpromote title
+            title = "Babu"
             if len(m.text.split()) == 3 and not m.reply_to_message:
-                title = " ".join(m.text.split()[2:16])  # trim title to 16 characters
+                title = " ".join(m.text.split()[2:16])
             elif len(m.text.split()) >= 2 and m.reply_to_message:
-                title = " ".join(m.text.split()[1:16])  # trim title to 16 characters
+                title = " ".join(m.text.split()[1:16])
 
             await c.set_administrator_title(m.chat.id, user_id, title)
         promoter = await mention_html(m.from_user.first_name, m.from_user.id)
@@ -403,11 +405,12 @@ async def _(c: nlx, m):
     except RPCError:
         pass
     except Exception as e:
-        await m.reply_text(cgr("err").format(em.gagal), e)
+        await m.reply_text(cgr("err").format(em.gagal, e))
     return
 
 
 @ky.ubot("promote", sudo=True)
+@ky.devs("mpromote")
 async def _(c: nlx, m):
     em = Emojik()
     em.initialize()
@@ -601,3 +604,34 @@ async def _(c: nlx, m):
             await m.reply_text(cgr("res_36").format(em.sukses))
     else:
         return await m.reply_text(cgr("res_33").format(em.gagal))
+
+
+@ky.ubot("hantu", sudo=True)
+async def _(c: nlx, m):
+    em = Emojik()
+    em.initialize()
+    pros = await m.reply(cgr("proses").format(em.proses))
+    total_deleted_messages = 0
+    total_remaining_messages = 0
+    async for dialog in c.get_dialogs():
+        chat_id = dialog.chat.id
+        if dialog.chat.type == ChatType.PRIVATE:
+            deleted_messages_count = 0
+            remaining_messages_count = 0
+            async for hantunya in c.get_chat_history(chat_id, limit=100):
+                if hantunya.from_user and hantunya.from_user.is_deleted:
+                    try:
+                        user_id = hantunya.from_user.id
+                        info = await c.resolve_peer(user_id)
+                        await c.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
+                        deleted_messages_count += 1
+                    except PeerIdInvalid:
+                        print("ID peer tidak valid atau tidak dikenal")
+                else:
+                    remaining_messages_count += 1
+            total_deleted_messages += deleted_messages_count
+            total_remaining_messages += remaining_messages_count
+    await m.reply(
+        f"{em.sukses} **Berhasil menghapus : `{total_deleted_messages}`\n{em.gagal} Tersisa yang berlum terhapus : `{total_remaining_messages}`**"
+    )
+    await pros.delete()

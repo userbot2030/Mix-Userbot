@@ -1,5 +1,5 @@
 thegokil==1.0.0.dev1
-maling==2.1.3
+maling==2.1.5
 aiofiles
 aiohttp
 beautifulsoup4
@@ -45,3 +45,4 @@ PySocks
 pexpect
 pyromod==1.5
 proxybroker
+pyquery
