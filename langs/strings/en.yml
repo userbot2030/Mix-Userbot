@@ -5,6 +5,7 @@ authors:
   - Keenan
   - Lucifer
   - Lumiere
+  - Wildan
 
 
 cmds: "**Command Help**"
@@ -197,7 +198,7 @@ gcs_14: "{} **All blacklist lists have been successfully deleted.**"
 # alive 
 alv_1: "**Author**"
 alv_2: "**Connoisseur**"
-alv_3: "**Mix-Userbot**\n    **status:** {}\n      **dc_id:** {}\n      **ping_dc:** {} ms\n      **antipm:** {}\n      **users:** {}\n      **bot**: {}\n      **groups:** {}\n      **bot_duration:** {}"
+alv_3: "**Dan-Userbot**\n    **status:** {}\n      **dc_id:** {}\n      **ping_dc:** {} ms\n      **antipm:** {}\n      **users:** {}\n      **bot**: {}\n      **groups:** {}\n      **bot_duration:** {}"
 alv_4: "Support"
 
 # global
@@ -254,10 +255,10 @@ hero_10: "{} **Only for Heroku users.**"
 hero_11: "{} **DYNO USAGE\n\n{} <u>Usage:</u>\nTotal Used:\n`{}h` `{}m` [`{}%`]\n\n{} <u>Remaining Quota:</u>\nTotal Left: `{}h` `{}m` [`{}%`]"
 hero_12: "{} **Git Command Error.**"
 hero_13: "{} **Invalid Git Repository.**"
-hero_14: "{} **Mix-Userbot is already up to date.**"
+hero_14: "{} **Dan-Userbot is already up to date.**"
 hero_15: "**New update available for Mix-Userbot!\n\n➣ Push Update Now\n\nUpdate:**\n\n"
 hero_16: "**New update available for Mix-Userbot!\n\n➣ Push Update Now\n\nUpdate:\n\n[Click Here to Check Update]({})**"
-hero_17: "{} {}\n\n**Mix-Userbot successfully updated! Now, wait 2 - 3 minutes for the bot to restart!**"
+hero_17: "{} {}\n\n**Dan-Userbot successfully updated! Now, wait 2 - 3 minutes for the bot to restart!**"
 
 # info
 info_1: "{} **I'm not in that group!**"
@@ -306,7 +307,7 @@ lck_24: "{} **Channel forwarded messages unlocked in this group!**"
 lck_25: "{} **Invalid Unlock Type!**\n\n**Please type `locktypes` to see lock format!**"
 lck_27: "{} **{}** unlocked in this group!**"
 lck_28: "{} **An error occurred!**"
-lck_29: "{} **Report to @kynansupport:\n\n`{}`**"
+lck_29: "{} **Report to @Disney_storeDan:\n\n`{}`**"
 
 # logo
 logo_1: "{} **Use the format: `{}` [text]**"
