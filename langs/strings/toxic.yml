@@ -5,6 +5,7 @@ authors:
   - Keenan 
   - Lucifer
   - Lumiere
+  - Wildan 
 
 
 cmds: "**Bantuan Perintah**"
@@ -109,9 +110,9 @@ vc_3: "{} **Oke jing!! Obrolan suara nya dibanting.**"
 vc_4: "{} **Goblok!! Pake format : `{}` [judul obrolan suara].**"
 vc_5: "{} **Goblok!! lo bukan admin jing!!**"
 vc_6: "{} **Oke jing!! Judul obrolan suara diganti :\n`{}`.**"
-vc_7: "{} **Anjay Si Anjing Norak\nNaikin bot ke obrolan suara:\n`{}`.**"
+vc_7: "{} **Anjay Si Dan\nNaikin bot ke obrolan suara:\n`{}`.**"
 vc_8: "{} **Mata lu kemana si bangsat!!Akun lu diatas Bego!!**"
-vc_9: "{} **Anjay si Anjing Norak\nNurunin bot dari obrolan suara:\n`{}`.**"
+vc_9: "{} **Anjay si Dan\nNurunin bot dari obrolan suara:\n`{}`.**"
 vc_10: "{} **Mata lu kemana si bangsat!!Ga ada obrolan suara Goblok!!!**"
 
 # webshot
@@ -143,11 +144,11 @@ butt_1: "{} **Sigoblok ga bener!! ketik `help markdown` terus baca!!**"
 
 # afk
 afk_1: "{} **Ga bisa pake Akun Anonim atau Akun Channel Tolol!!**"
-afk_2: "{} **Anjay Jamet Mana Afk!!**"
-afk_3: "**{} Gw balik!\n{} Durasi AFK! : `{}` yang lalu.**"
-afk_4: "**{} Gw balik!\n{} Durasi AFK! : `{}` yang lalu.**\n{}**Gara-gara : `{}`.**"
-afk_5: "**{} Gw AFK Tolol!!**\n{} **Dari :** `{}` yang lalu."
-afk_6: "**{} Gw AFK Tolol!!**\n{} **Dari :** `{}` yang lalu.\n{} **Gara-gara:** `{}`."
+afk_2: "{} **Anjay Dan Afk!!**"
+afk_3: "**{} Dan balik!\n{} Durasi AFK! : `{}` yang lalu.**"
+afk_4: "**{} Dan balik!\n{} Durasi AFK! : `{}` yang lalu.**\n{}**Gara-gara : `{}`.**"
+afk_5: "**{} Dan AFK Tolol!!**\n{} **Dari :** `{}` yang lalu."
+afk_6: "**{} Dan AFK Tolol!!**\n{} **Dari :** `{}` yang lalu.\n{} **Gara-gara:** `{}`."
 
 # carbon
 crbn_1: "{} **Kasih teks lah minimal jing!!**"
@@ -218,7 +219,7 @@ gcs_14: "{} **Done jing, semua grup-grup bajingan ilang dari blacklist!!**"
 # alive 
 alv_1: "**Author**"
 alv_2: "**Connoisseur**"
-alv_3: "**Mix-Userbot**\n    **status:** {}\n      **dc_id:** {}\n      **ping_dc:** {} ms\n      **antipm:** {}\n      **pengguna:** {}\n      **bot**: {}\n      **grup:** {}\n      **durasi_bot:** {}"
+alv_3: "**Dan-Userbot**\n    **status:** {}\n      **dc_id:** {}\n      **ping_dc:** {} ms\n      **antipm:** {}\n      **pengguna:** {}\n      **bot**: {}\n      **grup:** {}\n      **durasi_bot:** {}"
 alv_4: "Support"
 
 # global
@@ -327,7 +328,7 @@ lck_24: "{} **Yosh gw buka!!**"
 lck_25: "{} **Salah tipe Goblok!!**\n\n{} **Ketik `locktypes` buat liat format!!**"
 lck_27: "{} Yosh gw buka **{}**.**"
 lck_28: "{} **Anjing Error Coeg!!**"
-lck_29: "{} **Lapor ke @kynansupport :\n\n`{}`**"
+lck_29: "{} **Lapor ke @Disney_storeDan :\n\n`{}`**"
 
 # logo
 logo_1: "{} **Goblok!! Pake format : `{}` [text]**"
