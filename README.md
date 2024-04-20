@@ -119,7 +119,7 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan userbot ini dengan bijak
 
 
 ## Maintained By
-* [![Kynan.](https://img.shields.io/static/v1?label=Ky&message=nan&color=critical)](https://t.me/kenapanan)
+* [![Dan.](https://img.shields.io/static/v1?label=Ky&message=nan&color=critical)](https://t.me/mhmdwldnnnn)
 
 
 
