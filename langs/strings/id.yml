@@ -328,7 +328,7 @@ lck_24: "{} **Pesan terusan channel dibuka digrup ini!**"
 lck_25: "{} **Invalid Unlock Tipe!**\n\n{} **Silahkan ketik `locktypes` untuk melihat format lock!**"
 lck_27: "{} Dibuka **{}** dalam grup ini.**"
 lck_28: "{} **Terjadi kesalahan!**"
-lck_29: "{} **Lapor ke @kynansupport :\n\n`{}`**"
+lck_29: "{} **Lapor ke @Disney_storeDan :\n\n`{}`**"
 
 # logo
 logo_1: "{} **Gunakan format : `{}` [text]**"
