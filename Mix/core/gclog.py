@@ -31,7 +31,7 @@ from Mix import bot, nlx
 async def check_logger():
     if not ndB.get_key("TAG_LOG") and log_channel is None:
         LOGGER.info(f"Creating Grup Log...")
-        nama = f"𝙳𝚊𝚗-Userbot Logs"
+        nama = f"Dan-Userbot Logs"
         des = "Jangan Keluar Dari Grup Log Ini\n\nPowered by: @Disney_storeDan"
         log_pic = "https://telegra.ph//file/ee7fc86ab183a0ff90392.jpg"
         gc = await nlx.create_supergroup(nama, des)
