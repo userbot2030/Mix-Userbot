@@ -6,7 +6,7 @@
         "Pyrogram",
         "Userbot"
     ],
-    "repository": "https://github.com/Muhamadwildan018/Mix-Userbot",
+    "repository": "https://github.com/userbot2030/Mix-Userbot",
     "success_url": "https://t.me/mhmdwldnnnn",
     "stack": "container",
     "env": {
