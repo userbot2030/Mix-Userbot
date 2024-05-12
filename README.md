@@ -10,12 +10,12 @@
 Support Multi Language, If You want more language Contact Me On Telegram.</b>
 
 
-[![Last Commit](https://img.shields.io/github/last-commit/Muhamadwildan018/Mix-Userbot?color=red&logo=github&logoColor=blue&style=for-the-badge)](https://github.com/Muhamadwildan018/Mix-Userbot/commits)
-[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.png?v=103)](https://github.com/Muhamadwildan018/Mix-Userbot)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-Yes-blue)](https://GitHub.com/Muhamadwildan018/Mix-Userbot/graphs/commit-activity)
-[![CodeQuality](https://img.shields.io/codacy/grade/a723cb464d5a4d25be3152b5d71de82d?color=blue&logo=codacy)](https://app.codacy.com/gh/Muhamadwildan018/Mix-Userbot/dashboard)
-[![GitHub Forks](https://img.shields.io/github/forks/Muhamadwildan018/Mix-Userbot?&logo=github)](https://github.com/naya1503/Mix-Userbot/fork)
-[![GitHub Stars](https://img.shields.io/github/stars/Muhamadwildan018/Mix-Userbot?&logo=github)](https://github.com/Muhamadwildan018/Mix-Userbot/stargazers)
+[![Last Commit](https://img.shields.io/github/last-commit/userbot2030/Mix-Userbot?color=red&logo=github&logoColor=blue&style=for-the-badge)](https://github.com/userbot2030/Mix-Userbot/commits)
+[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.png?v=103)](https://github.com/userbot2030/Mix-Userbot)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-Yes-blue)](https://GitHub.com/userbot2030/Mix-Userbot/graphs/commit-activity)
+[![CodeQuality](https://img.shields.io/codacy/grade/a723cb464d5a4d25be3152b5d71de82d?color=blue&logo=codacy)](https://app.codacy.com/gh/userbot2030/Mix-Userbot/dashboard)
+[![GitHub Forks](https://img.shields.io/github/forks/userbot2030/Mix-Userbot?&logo=github)](https://github.com/naya1503/Mix-Userbot/fork)
+[![GitHub Stars](https://img.shields.io/github/stars/userbot2030/Mix-Userbot?&logo=github)](https://github.com/userbot2030/Mix-Userbot/stargazers)
 ----
 
 ## Disclaimer
@@ -41,7 +41,7 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan userbot ini dengan bijak
 
 • `sudo apt-get install python3-pip ffmpeg -y`
 
- • `git clone https://github.com/Muhamadwildan018/Mix-Userbot`
+ • `git clone https://github.com/userbot2030/Mix-Userbot`
 
  • `cd Mix-Userbot`
 
@@ -69,7 +69,7 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan userbot ini dengan bijak
 
 • `curl -sSL https://get.docker.com | sh`
 
- • `git clone https://github.com/Muhamadwildan018/Mix-Userbot`
+ • `git clone https://github.com/userbot2030/Mix-Userbot`
 
  • `cd Mix-Userbot`
 
@@ -95,7 +95,7 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan userbot ini dengan bijak
 • Silakan isi vars yang diperlukan api_id, api_hash, session, heroku_api, heroku_app_name, mongo_uri, db_name, scheme, hostname, port, username dan password jika butuh.
 
 <h3 align="center">Click The Button</h3>
-<a align="center" href="https://dashboard.heroku.com/new?template=https://github.com/Muhamadwildan018/Mix-Userbot"><img src="https://www.herokucdn.com/deploy/button.svg"></a>
+<a align="center" href="https://dashboard.heroku.com/new?template=https://github.com/userbot2030/Mix-Userbot"><img src="https://www.herokucdn.com/deploy/button.svg"></a>
 </div>
 
 </details>
