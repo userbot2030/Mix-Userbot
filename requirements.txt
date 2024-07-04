@@ -33,10 +33,10 @@ gtts
 search_engine_parser
 pytimeparse
 regex
-Pillow==9.0.1
+Pillow==9.0.0
 pytz
 pyyaml
-lyricsgenius==3.0.1
+lyricsgenius==3.0.0
 SafoneApi
 pytgcalls==3.0.0.dev22
 pyrofork
