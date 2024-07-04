@@ -1,5 +1,5 @@
 thegokil==1.0.0.dev1
-maling==2.4.0
+maling==2.4.1
 aiofiles
 aiohttp
 beautifulsoup4
@@ -33,7 +33,7 @@ gtts
 search_engine_parser
 pytimeparse
 regex
-Pillow==9.0.1
+Pillow==9.0.0
 pytz
 pyyaml
 lyricsgenius==3.0.1
