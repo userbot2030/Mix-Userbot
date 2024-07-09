@@ -13,7 +13,7 @@ import re
 from datetime import datetime, timedelta
 from re import findall
 
-from pykeyboard import InlineKeyboard
+from pyrogram.types import InlineKeyboard
 from pyrogram.types import InlineKeyboardButton
 from pyrogram.types import InlineKeyboardButton as Ikb
 from pyrogram.types import InlineKeyboardMarkup
