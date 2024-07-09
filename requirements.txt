@@ -1,5 +1,5 @@
 thegokil==1.0.0.dev1
-maling==2.1.5
+maling==2.4.3
 aiofiles
 aiohttp
 beautifulsoup4
@@ -13,7 +13,6 @@ uvloop
 wget
 psutil
 yt-dlp
-pykeyboard
 bs4
 pymediainfo
 youtube-search
@@ -39,10 +38,15 @@ pytz
 pyyaml
 lyricsgenius==3.0.1
 SafoneApi
-pytgcalls==3.0.0.dev22
-pyrogram
+pytgcalls==3.0.0.dev24
 PySocks
 pexpect
-pyromod==1.5
 proxybroker
 pyquery
+aiogram
+assemblyai
+removebg
+numpy
+opencv-python
+git+https://github.com/naya1503/mypyrogram
+tornado
