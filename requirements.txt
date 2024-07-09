@@ -33,7 +33,7 @@ gtts
 search_engine_parser
 pytimeparse
 regex
-Pillow==9.0.0
+Pillow==9.0.1
 pytz
 pyyaml
 lyricsgenius==3.0.1
